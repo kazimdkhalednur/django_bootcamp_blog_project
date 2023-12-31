@@ -17,7 +17,7 @@
                         href="{% url 'blogs:contact' %}">Contact</a>
                 </li>
                 {% if request.user.is_authenticated%}
-                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'blogs:home' %}">Logout</a>
+                <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'accounts:logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4"

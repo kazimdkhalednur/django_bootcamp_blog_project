@@ -1,6 +1,6 @@
-from typing import Any
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.views import LoginView
+from django.contrib.auth import logout
 
 from .forms import RegistrationForm, CustomAuthenticationForm
 from .models import User
@@ -32,3 +32,8 @@ class CustomLoginView(LoginView):
         )
         return context
         
+
+def signout(request):
+    logout(request)
+    return redirect("blogs:home")
+
